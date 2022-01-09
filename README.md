@@ -31,7 +31,7 @@ https://api.coinpaprika.com/v1/tickers/${coinId}
 - [x] Route States
 - [x] Coin Data
 - [x] Data Types
-- [ ] Nested Routes part One
+- [x] Nested Routes part One
 - [ ] Nested Routes part Two
 - [ ] React Query part One
 - [ ] React Query part Two
