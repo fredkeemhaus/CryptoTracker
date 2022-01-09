@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { fetchCoins } from "../api";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -54,7 +56,7 @@ const Img = styled.img`
   margin-right: 10px;
 `;
 
-interface CoinInterface {
+interface ICoin {
   id: string;
   name: string;
   symbol: string;
@@ -64,28 +66,28 @@ interface CoinInterface {
   type: string;
 }
 function Coins() {
-  const [coins, setCoins] = useState<CoinInterface[]>([]);
-  const [loading, setLoading] = useState(true);
+  /*
+    React Query
+    React 애플리케이션에서 서버 state를 fetching, caching, synchronizing, updating할 수 있도록 도와주는 라이브러리
+    https://react-query.tanstack.com/reference/useQuery#_top
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("https://api.coinpaprika.com/v1/coins");
-      const json = await response.json();
-      setCoins(json.slice(0, 100));
-      setLoading(false);
-    })();
-  }, []);
+    Query Key
+    React Query는 쿼리 키를 기반으로 쿼리 캐싱을 관리
+    https://react-query.tanstack.com/guides/query-keys
+  */
+
+  const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
 
   return (
     <Container>
       <Header>
         <Title>코인</Title>
       </Header>
-      {loading ? (
+      {isLoading ? (
         <Loader>Loadiing...</Loader>
       ) : (
         <CoinsList>
-          {coins.map((coin) => {
+          {data?.slice(0, 100).map((coin) => {
             return (
               <Coin key={coin.id}>
                 <Link
