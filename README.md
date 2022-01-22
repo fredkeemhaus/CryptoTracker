@@ -22,6 +22,26 @@ https://api.coinpaprika.com/v1/tickers/${coinId}
 
 ---
 
+## Using Library
+
+### react-router-dom
+
+https://v5.reactrouter.com/web/guides/quick-start
+
+### react-query
+
+https://react-query.tanstack.com/
+
+### APEXCHARTS
+
+https://apexcharts.com/
+
+### styled-components
+
+https://styled-components.com/
+
+---
+
 ## Crypto Tracker
 
 - [x] Setup
@@ -37,7 +57,7 @@ https://api.coinpaprika.com/v1/tickers/${coinId}
 - [x] React Query part Two
 - [x] Recap
 - [x] Price Chart
-- [ ] Price Chart part Two
+- [x] Price Chart part Two
 - [ ] Price Chart part Three
 - [ ] Final Touches
 - [ ] Conclusions
