@@ -40,6 +40,10 @@ https://apexcharts.com/
 
 https://styled-components.com/
 
+### react-helmet
+
+https://www.npmjs.com/package/react-helmet
+
 ---
 
 ## Crypto Tracker
@@ -58,6 +62,6 @@ https://styled-components.com/
 - [x] Recap
 - [x] Price Chart
 - [x] Price Chart part Two
-- [ ] Price Chart part Three
-- [ ] Final Touches
+- [x] Price Chart part Three
+- [x] Final Touches
 - [ ] Conclusions
