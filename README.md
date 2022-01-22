@@ -34,9 +34,9 @@ https://api.coinpaprika.com/v1/tickers/${coinId}
 - [x] Nested Routes part One
 - [x] Nested Routes part Two
 - [x] React Query part One
-- [ ] React Query part Two
-- [ ] Recap
-- [ ] Price Chart
+- [x] React Query part Two
+- [x] Recap
+- [x] Price Chart
 - [ ] Price Chart part Two
 - [ ] Price Chart part Three
 - [ ] Final Touches
