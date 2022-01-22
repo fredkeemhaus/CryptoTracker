@@ -65,3 +65,7 @@ https://www.npmjs.com/package/react-helmet
 - [x] Price Chart part Three
 - [x] Final Touches
 - [x] Conclusions
+
+---
+
+## Conclusions
