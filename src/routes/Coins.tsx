@@ -21,10 +21,11 @@ const Header = styled.header`
 const CoinsList = styled.ul``;
 
 const Coin = styled.li`
-  background-color: white;
-  color: ${(props) => props.theme.bgColor};
+  background-color: ${(props) => props.theme.cardBgColor};
+  color: ${(props) => props.theme.textColor};
   border-radius: 15px;
   margin-bottom: 10px;
+  border: 1px solid white;
 
   a {
     display: flex;
@@ -66,17 +67,10 @@ interface ICoin {
   is_active: boolean;
   type: string;
 }
-function Coins() {
-  /*
-    React Query
-    React 애플리케이션에서 서버 state를 fetching, caching, synchronizing, updating할 수 있도록 도와주는 라이브러리
-    https://react-query.tanstack.com/reference/useQuery#_top
 
-    Query Key
-    React Query는 쿼리 키를 기반으로 쿼리 캐싱을 관리
-    https://react-query.tanstack.com/guides/query-keys
-  */
+interface ICoinsProps {}
 
+function Coins({}: ICoinsProps) {
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
 
   return (
